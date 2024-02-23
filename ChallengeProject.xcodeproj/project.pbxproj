@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		E9291B292B881E7200302202 /* ChallengeProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B282B881E7200302202 /* ChallengeProjectApp.swift */; };
-		E9291B2B2B881E7200302202 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B2A2B881E7200302202 /* ContentView.swift */; };
 		E9291B2D2B881E7300302202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9291B2C2B881E7300302202 /* Assets.xcassets */; };
 		E9291B302B881E7300302202 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9291B2F2B881E7300302202 /* Preview Assets.xcassets */; };
 		E9291B3A2B881E7300302202 /* ChallengeProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B392B881E7300302202 /* ChallengeProjectTests.swift */; };
 		E9291B442B881E7300302202 /* ChallengeProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B432B881E7300302202 /* ChallengeProjectUITests.swift */; };
 		E9291B462B881E7300302202 /* ChallengeProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B452B881E7300302202 /* ChallengeProjectUITestsLaunchTests.swift */; };
+		E9291B592B881E9D00302202 /* CSearchBar+ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B542B881E9D00302202 /* CSearchBar+ViewBuilder.swift */; };
+		E9291B5A2B881E9D00302202 /* CSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B552B881E9D00302202 /* CSearchBar.swift */; };
+		E9291B5C2B881E9D00302202 /* CCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B582B881E9D00302202 /* CCellView.swift */; };
+		E9291B5F2B881EAB00302202 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B5E2B881EAB00302202 /* UISearchBarExtensions.swift */; };
+		E9291B652B881EBD00302202 /* SalesPersonSearchView+ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B622B881EBD00302202 /* SalesPersonSearchView+ViewBuilder.swift */; };
+		E9291B662B881EBD00302202 /* SalesPersonSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B632B881EBD00302202 /* SalesPersonSearchView.swift */; };
+		E9291B672B881EBD00302202 /* SalesPersonSearchView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B642B881EBD00302202 /* SalesPersonSearchView+ViewModel.swift */; };
+		E9291B6A2B881EC300302202 /* SalesPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B692B881EC300302202 /* SalesPerson.swift */; };
+		E9291B6C2B881ECA00302202 /* CStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B6B2B881ECA00302202 /* CStrings.swift */; };
+		E9291B6E2B881ECF00302202 /* CColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B6D2B881ECF00302202 /* CColors.swift */; };
+		E9291B702B88365E00302202 /* CSearch+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B6F2B88365E00302202 /* CSearch+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +46,6 @@
 /* Begin PBXFileReference section */
 		E9291B252B881E7200302202 /* ChallengeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9291B282B881E7200302202 /* ChallengeProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeProjectApp.swift; sourceTree = "<group>"; };
-		E9291B2A2B881E7200302202 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9291B2C2B881E7300302202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9291B2F2B881E7300302202 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9291B352B881E7300302202 /* ChallengeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +53,17 @@
 		E9291B3F2B881E7300302202 /* ChallengeProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9291B432B881E7300302202 /* ChallengeProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeProjectUITests.swift; sourceTree = "<group>"; };
 		E9291B452B881E7300302202 /* ChallengeProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E9291B542B881E9D00302202 /* CSearchBar+ViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CSearchBar+ViewBuilder.swift"; sourceTree = "<group>"; };
+		E9291B552B881E9D00302202 /* CSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSearchBar.swift; sourceTree = "<group>"; };
+		E9291B582B881E9D00302202 /* CCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCellView.swift; sourceTree = "<group>"; };
+		E9291B5E2B881EAB00302202 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtensions.swift; sourceTree = "<group>"; };
+		E9291B622B881EBD00302202 /* SalesPersonSearchView+ViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SalesPersonSearchView+ViewBuilder.swift"; sourceTree = "<group>"; };
+		E9291B632B881EBD00302202 /* SalesPersonSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesPersonSearchView.swift; sourceTree = "<group>"; };
+		E9291B642B881EBD00302202 /* SalesPersonSearchView+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SalesPersonSearchView+ViewModel.swift"; sourceTree = "<group>"; };
+		E9291B692B881EC300302202 /* SalesPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesPerson.swift; sourceTree = "<group>"; };
+		E9291B6B2B881ECA00302202 /* CStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CStrings.swift; sourceTree = "<group>"; };
+		E9291B6D2B881ECF00302202 /* CColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CColors.swift; sourceTree = "<group>"; };
+		E9291B6F2B88365E00302202 /* CSearch+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSearch+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +114,13 @@
 		E9291B272B881E7200302202 /* ChallengeProject */ = {
 			isa = PBXGroup;
 			children = (
+				E9291B682B881EC300302202 /* DataModels */,
+				E9291B602B881EBD00302202 /* MainViews */,
+				E9291B5D2B881EAB00302202 /* UIKitExtensions */,
+				E9291B522B881E9D00302202 /* ViewComponents */,
 				E9291B282B881E7200302202 /* ChallengeProjectApp.swift */,
-				E9291B2A2B881E7200302202 /* ContentView.swift */,
+				E9291B6B2B881ECA00302202 /* CStrings.swift */,
+				E9291B6D2B881ECF00302202 /* CColors.swift */,
 				E9291B2C2B881E7300302202 /* Assets.xcassets */,
 				E9291B2E2B881E7300302202 /* Preview Content */,
 			);
@@ -125,6 +150,67 @@
 				E9291B452B881E7300302202 /* ChallengeProjectUITestsLaunchTests.swift */,
 			);
 			path = ChallengeProjectUITests;
+			sourceTree = "<group>";
+		};
+		E9291B522B881E9D00302202 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E9291B532B881E9D00302202 /* CSearchBar */,
+				E9291B572B881E9D00302202 /* CCellView */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		E9291B532B881E9D00302202 /* CSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				E9291B552B881E9D00302202 /* CSearchBar.swift */,
+				E9291B542B881E9D00302202 /* CSearchBar+ViewBuilder.swift */,
+				E9291B6F2B88365E00302202 /* CSearch+ViewModel.swift */,
+			);
+			path = CSearchBar;
+			sourceTree = "<group>";
+		};
+		E9291B572B881E9D00302202 /* CCellView */ = {
+			isa = PBXGroup;
+			children = (
+				E9291B582B881E9D00302202 /* CCellView.swift */,
+			);
+			path = CCellView;
+			sourceTree = "<group>";
+		};
+		E9291B5D2B881EAB00302202 /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9291B5E2B881EAB00302202 /* UISearchBarExtensions.swift */,
+			);
+			path = UIKitExtensions;
+			sourceTree = "<group>";
+		};
+		E9291B602B881EBD00302202 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				E9291B612B881EBD00302202 /* SalesmenSearchView */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		E9291B612B881EBD00302202 /* SalesmenSearchView */ = {
+			isa = PBXGroup;
+			children = (
+				E9291B622B881EBD00302202 /* SalesPersonSearchView+ViewBuilder.swift */,
+				E9291B632B881EBD00302202 /* SalesPersonSearchView.swift */,
+				E9291B642B881EBD00302202 /* SalesPersonSearchView+ViewModel.swift */,
+			);
+			path = SalesmenSearchView;
+			sourceTree = "<group>";
+		};
+		E9291B682B881EC300302202 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				E9291B692B881EC300302202 /* SalesPerson.swift */,
+			);
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +343,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9291B2B2B881E7200302202 /* ContentView.swift in Sources */,
+				E9291B5A2B881E9D00302202 /* CSearchBar.swift in Sources */,
+				E9291B652B881EBD00302202 /* SalesPersonSearchView+ViewBuilder.swift in Sources */,
+				E9291B5F2B881EAB00302202 /* UISearchBarExtensions.swift in Sources */,
+				E9291B592B881E9D00302202 /* CSearchBar+ViewBuilder.swift in Sources */,
+				E9291B6C2B881ECA00302202 /* CStrings.swift in Sources */,
+				E9291B5C2B881E9D00302202 /* CCellView.swift in Sources */,
+				E9291B702B88365E00302202 /* CSearch+ViewModel.swift in Sources */,
+				E9291B672B881EBD00302202 /* SalesPersonSearchView+ViewModel.swift in Sources */,
+				E9291B6A2B881EC300302202 /* SalesPerson.swift in Sources */,
+				E9291B6E2B881ECF00302202 /* CColors.swift in Sources */,
+				E9291B662B881EBD00302202 /* SalesPersonSearchView.swift in Sources */,
 				E9291B292B881E7200302202 /* ChallengeProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
