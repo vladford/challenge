@@ -12,6 +12,7 @@ struct CSearchBar: View {
     @Binding var text: String
     @FocusState var isTextFieldFocused: Bool
     @State var viewModel = ViewModel()
+    var keyboardType: UIKeyboardType
     
      let height: CGFloat = 36
      let horizontalPadding: CGFloat = 30
@@ -23,6 +24,7 @@ struct CSearchBar: View {
     var body: some View {
         HStack {
             TextField(CStrings.search, text: $text)
+                .keyboardType(keyboardType)
                 .focused($isTextFieldFocused)
                 .frame(height: height)
                 .padding(.horizontal, horizontalPadding)
