@@ -31,13 +31,8 @@ extension SalesPersonSearchView {
             
             guard !searchText.isEmpty else { return data }
             return data.filter { person in
-                
                 for area in person.allAreas {
-                    
-                    print("area: \(area)")
-                    
                     if area.starts(with: searchText) {
-                        print("x area: \(area) starts \(searchText))")
                         return true
                     }
                 }

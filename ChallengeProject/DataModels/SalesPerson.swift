@@ -12,7 +12,7 @@ struct SalesPerson: Identifiable, Hashable {
     let name: String
     let areas: [String]
     private (set) var areasString = ""
-    private (set) var allAreas = [String]()
+    private (set) var allAreas = Set<String>()
     
     init(name: String, areas: [String]) {
         self.name = name
@@ -22,20 +22,25 @@ struct SalesPerson: Identifiable, Hashable {
     }
     
     
-    func getAllCodes(areas:[String]) -> [String] {
-        var expandedAreas = [String]()
+    func getAllCodes(areas: [String]) -> Set<String> {
+        var expandedAreas = Set<String>()
         for area in areas {
             if area.contains("*") {
+                // Determine the base of the code without the asterisk
                 let base = area.dropLast()
-                let asteriskPosition = area.distance(from: area.startIndex, to: area.firstIndex(of: "*")!)
-                let rangeOfPossibilities = Int(pow(10.0, Double(5 - asteriskPosition - 1)))
+                let numberOfZeros = 5 - base.count // Calculate how many zeros to append
                 
-                for i in 0..<rangeOfPossibilities {
-                    let postfix = String(format: "%0\(5 - base.count)d", i)
-                    expandedAreas.append("\(base)\(postfix)")
+                // Calculate the start and end range based on the base
+                let startRange = Int(base + String(repeating: "0", count: numberOfZeros))!
+                let endRange = Int(base + String(repeating: "9", count: numberOfZeros))!
+                
+                // Generate all codes within the range
+                for code in startRange...endRange {
+                    expandedAreas.insert(String(code))
                 }
             } else {
-                expandedAreas.append(area)
+                // If there's no asterisk, add the area code as it is
+                expandedAreas.insert(area)
             }
         }
         return expandedAreas
