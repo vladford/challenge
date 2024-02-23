@@ -10,51 +10,57 @@ import SwiftUI
 
 struct CCellView: View {
     
-    @State var isExpanded: Bool = false
-    @State var rotationAngle: Double = 0
+    @State var viewModel = ViewModel()
     
     var name: String
     var addresses: String
     var rowHeight: CGFloat
     
+    let iconDiameter: CGFloat = 42
+    let iconFontSize: CGFloat = 20
+    let detailFontSize: CGFloat = 15
+    let labelFontize: CGFloat = 17
+    let lineRowTrailingInset: CGFloat = 17
+    let chevronSize: CGSize = CGSize(width: 8, height: 13)
+    let chevronTrailingPadding: CGFloat = 6
+    
     var body: some View {
         HStack(alignment:.center) {
-            Text(name.prefix(1))
+            circleIcon(
+                letter: String(name.prefix(1)),
+                diameter: iconDiameter,
+                color: CColors.backgroundAccent,
+                outlineColor: CColors.gray4,
+                letterColor: CColors.mainText,
+                letterSize: iconFontSize)
+            .padding([.leading, .trailing], 1)
             VStack {
                 DisclosureGroup(
-                    isExpanded: $isExpanded,
+                    isExpanded: $viewModel.isExpanded,
                     content: {
                         HStack {
                             Text(addresses)
+                                .font(.system(size: detailFontSize))
+                                .foregroundColor(CColors.gray1)
                             Spacer()
                         }
                     },
                     label: {
                         Text(name)
+                        .font(.system(size: labelFontize))
                     }
                 )
             }
-            Button(action: {
-                isExpanded.toggle()
-            }) {
-                Image(systemName: "chevron.right")
-                    .rotationEffect(Angle(degrees: rotationAngle))
-                    .animation(.easeInOut, value: rotationAngle)
-                    .foregroundColor(CColors.gray1)
-                    .padding(.trailing, 6)
-            }
+            chevronButton()
+                
         }
         .frame(height: rowHeight)
-        .listRowBackground(Color.white)
-        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 18))
-        .foregroundColor(.black)
+        .listRowBackground(Color.clear)
+        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: lineRowTrailingInset))
+        .foregroundColor(CColors.mainText)
         .buttonStyle(PlainButtonStyle()).accentColor(.clear).disabled(true)
-        .onChange(of: isExpanded) {
-            if isExpanded {
-                rotationAngle = 90
-            } else {
-                rotationAngle = 0
-            }
+        .onChange(of: viewModel.isExpanded) {
+            viewModel.updateChevronRotation()
         }
     }
 }

@@ -24,6 +24,8 @@
 		E9291B6C2B881ECA00302202 /* CStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B6B2B881ECA00302202 /* CStrings.swift */; };
 		E9291B6E2B881ECF00302202 /* CColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B6D2B881ECF00302202 /* CColors.swift */; };
 		E9291B702B88365E00302202 /* CSearch+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B6F2B88365E00302202 /* CSearch+ViewModel.swift */; };
+		E9291B722B883EEF00302202 /* CCell+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B712B883EEF00302202 /* CCell+ViewModel.swift */; };
+		E9291B742B8840F900302202 /* CCell+ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B732B8840F900302202 /* CCell+ViewBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		E9291B6B2B881ECA00302202 /* CStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CStrings.swift; sourceTree = "<group>"; };
 		E9291B6D2B881ECF00302202 /* CColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CColors.swift; sourceTree = "<group>"; };
 		E9291B6F2B88365E00302202 /* CSearch+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSearch+ViewModel.swift"; sourceTree = "<group>"; };
+		E9291B712B883EEF00302202 /* CCell+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CCell+ViewModel.swift"; sourceTree = "<group>"; };
+		E9291B732B8840F900302202 /* CCell+ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CCell+ViewBuilder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				E9291B582B881E9D00302202 /* CCellView.swift */,
+				E9291B712B883EEF00302202 /* CCell+ViewModel.swift */,
+				E9291B732B8840F900302202 /* CCell+ViewBuilder.swift */,
 			);
 			path = CCellView;
 			sourceTree = "<group>";
@@ -343,9 +349,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9291B722B883EEF00302202 /* CCell+ViewModel.swift in Sources */,
 				E9291B5A2B881E9D00302202 /* CSearchBar.swift in Sources */,
 				E9291B652B881EBD00302202 /* SalesPersonSearchView+ViewBuilder.swift in Sources */,
 				E9291B5F2B881EAB00302202 /* UISearchBarExtensions.swift in Sources */,
+				E9291B742B8840F900302202 /* CCell+ViewBuilder.swift in Sources */,
 				E9291B592B881E9D00302202 /* CSearchBar+ViewBuilder.swift in Sources */,
 				E9291B6C2B881ECA00302202 /* CStrings.swift in Sources */,
 				E9291B5C2B881E9D00302202 /* CCellView.swift in Sources */,
