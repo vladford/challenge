@@ -10,7 +10,7 @@
 		E9291B292B881E7200302202 /* ChallengeProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B282B881E7200302202 /* ChallengeProjectApp.swift */; };
 		E9291B2D2B881E7300302202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9291B2C2B881E7300302202 /* Assets.xcassets */; };
 		E9291B302B881E7300302202 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9291B2F2B881E7300302202 /* Preview Assets.xcassets */; };
-		E9291B3A2B881E7300302202 /* ChallengeProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B392B881E7300302202 /* ChallengeProjectTests.swift */; };
+		E9291B3A2B881E7300302202 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B392B881E7300302202 /* NetworkTests.swift */; };
 		E9291B442B881E7300302202 /* ChallengeProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B432B881E7300302202 /* ChallengeProjectUITests.swift */; };
 		E9291B462B881E7300302202 /* ChallengeProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B452B881E7300302202 /* ChallengeProjectUITestsLaunchTests.swift */; };
 		E9291B592B881E9D00302202 /* CSearchBar+ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B542B881E9D00302202 /* CSearchBar+ViewBuilder.swift */; };
@@ -53,7 +53,7 @@
 		E9291B2C2B881E7300302202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9291B2F2B881E7300302202 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9291B352B881E7300302202 /* ChallengeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9291B392B881E7300302202 /* ChallengeProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeProjectTests.swift; sourceTree = "<group>"; };
+		E9291B392B881E7300302202 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		E9291B3F2B881E7300302202 /* ChallengeProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9291B432B881E7300302202 /* ChallengeProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeProjectUITests.swift; sourceTree = "<group>"; };
 		E9291B452B881E7300302202 /* ChallengeProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		E9291B382B881E7300302202 /* ChallengeProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				E9291B392B881E7300302202 /* ChallengeProjectTests.swift */,
+				E9291B392B881E7300302202 /* NetworkTests.swift */,
 			);
 			path = ChallengeProjectTests;
 			sourceTree = "<group>";
@@ -386,7 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9291B3A2B881E7300302202 /* ChallengeProjectTests.swift in Sources */,
+				E9291B3A2B881E7300302202 /* NetworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
