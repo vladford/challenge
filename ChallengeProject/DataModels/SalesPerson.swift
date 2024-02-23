@@ -32,6 +32,7 @@ struct SalesPerson: Identifiable, Hashable, Decodable {
     
     func getAllCodes(areas: [String]) -> Set<String> {
         var expandedAreas = Set<String>()
+
         for area in areas {
             if area.contains("*") {
                 // Determine the base of the code without the asterisk
