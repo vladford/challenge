@@ -7,20 +7,28 @@
 
 import Foundation
 
-struct SalesPerson: Identifiable, Hashable {
-    let id = UUID()
+struct SalesPerson: Identifiable, Hashable, Decodable {
+    private (set) var id = UUID()
     let name: String
     let areas: [String]
-    private (set) var areasString = ""
-    private (set) var allAreas = Set<String>()
+    var areasString = ""
+    var allAreas = Set<String>()
     
     init(name: String, areas: [String]) {
         self.name = name
         self.areas = areas
+        processData()
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case areas
+    }
+    
+    mutating func processData() {
         self.areasString = getAreasString(areas: areas)
         self.allAreas = getAllCodes(areas: areas)
     }
-    
     
     func getAllCodes(areas: [String]) -> Set<String> {
         var expandedAreas = Set<String>()
@@ -51,3 +59,4 @@ struct SalesPerson: Identifiable, Hashable {
         return areas.joined(separator: ", ")
     }
 }
+

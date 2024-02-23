@@ -25,6 +25,9 @@
 		E9291B702B88365E00302202 /* CSearch+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B6F2B88365E00302202 /* CSearch+ViewModel.swift */; };
 		E9291B722B883EEF00302202 /* CCell+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B712B883EEF00302202 /* CCell+ViewModel.swift */; };
 		E9291B742B8840F900302202 /* CCell+ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B732B8840F900302202 /* CCell+ViewBuilder.swift */; };
+		E9291B772B887D7A00302202 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B762B887D7A00302202 /* NetworkServiceProtocol.swift */; };
+		E9291B792B887D9A00302202 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B782B887D9A00302202 /* NetworkService.swift */; };
+		E9291B7B2B887F0A00302202 /* CURLStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B7A2B887F0A00302202 /* CURLStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		E9291B6F2B88365E00302202 /* CSearch+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSearch+ViewModel.swift"; sourceTree = "<group>"; };
 		E9291B712B883EEF00302202 /* CCell+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CCell+ViewModel.swift"; sourceTree = "<group>"; };
 		E9291B732B8840F900302202 /* CCell+ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CCell+ViewBuilder.swift"; sourceTree = "<group>"; };
+		E9291B762B887D7A00302202 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		E9291B782B887D9A00302202 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E9291B7A2B887F0A00302202 /* CURLStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,9 +126,11 @@
 				E9291B602B881EBD00302202 /* MainViews */,
 				E9291B5D2B881EAB00302202 /* UIKitExtensions */,
 				E9291B522B881E9D00302202 /* ViewComponents */,
+				E9291B752B887D5500302202 /* Network */,
 				E9291B282B881E7200302202 /* ChallengeProjectApp.swift */,
 				E9291B6B2B881ECA00302202 /* CStrings.swift */,
 				E9291B6D2B881ECF00302202 /* CColors.swift */,
+				E9291B7A2B887F0A00302202 /* CURLStrings.swift */,
 				E9291B2C2B881E7300302202 /* Assets.xcassets */,
 				E9291B2E2B881E7300302202 /* Preview Content */,
 			);
@@ -214,6 +222,15 @@
 				E9291B692B881EC300302202 /* SalesPerson.swift */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		E9291B752B887D5500302202 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E9291B762B887D7A00302202 /* NetworkServiceProtocol.swift */,
+				E9291B782B887D9A00302202 /* NetworkService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +373,9 @@
 				E9291B702B88365E00302202 /* CSearch+ViewModel.swift in Sources */,
 				E9291B672B881EBD00302202 /* SalesPersonSearchView+ViewModel.swift in Sources */,
 				E9291B6A2B881EC300302202 /* SalesPerson.swift in Sources */,
+				E9291B792B887D9A00302202 /* NetworkService.swift in Sources */,
+				E9291B772B887D7A00302202 /* NetworkServiceProtocol.swift in Sources */,
+				E9291B7B2B887F0A00302202 /* CURLStrings.swift in Sources */,
 				E9291B6E2B881ECF00302202 /* CColors.swift in Sources */,
 				E9291B662B881EBD00302202 /* SalesPersonSearchView.swift in Sources */,
 				E9291B292B881E7200302202 /* ChallengeProjectApp.swift in Sources */,

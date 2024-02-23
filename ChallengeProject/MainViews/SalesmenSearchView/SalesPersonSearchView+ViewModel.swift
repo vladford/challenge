@@ -12,12 +12,8 @@ import SwiftUI
 extension SalesPersonSearchView {
     
     class ViewModel: ObservableObject {
-        var data: [SalesPerson] = [
-            SalesPerson(name:"Artem Titarenko", areas: ["76133", "9900*", "86543"]),
-            SalesPerson(name:"Bernd Schmitt", areas: ["7619*"]),
-            SalesPerson(name:"Chris Krapp", areas: ["762*"]),
-            SalesPerson(name:"Alex Uber", areas: ["86*"])
-        ]
+        private let networkService: NetworkServiceProtocol
+        var data = [SalesPerson]()
         
         @Published var searchText = ""
         @Published private var debouncedSearchText = ""
@@ -40,10 +36,36 @@ extension SalesPersonSearchView {
             }
         }
         
-        init<S: Scheduler>(scheduler: S) where S.SchedulerTimeType == DispatchQueue.SchedulerTimeType {
+        init<S: Scheduler>(scheduler: S, networkService: NetworkServiceProtocol) where S.SchedulerTimeType == DispatchQueue.SchedulerTimeType {
+            self.networkService = networkService
+            
             $searchText
                 .debounce(for: .seconds(bufferSecondsToWait), scheduler: scheduler)
                 .assign(to: &$debouncedSearchText)
+        }
+        
+        // Network
+        func loadData() {
+            let url = URL(string: CURLStrings.sampleDataUrl)!
+            networkService.fetchData(from: url) { [weak self] result in
+                switch result {
+                case .success(let data):
+                    guard let self = self else { return }
+                    self.data = self.decodeJSON(data: data).map{ SalesPerson(name: $0.name, areas: $0.areas)}
+
+                case .failure(let error):
+                    print("Error fetching data: \(error)")
+                }
+            }
+        }
+        
+        func decodeJSON(data: Data) -> [SalesPerson] {
+            do {
+                return try JSONDecoder().decode([SalesPerson].self, from: data)
+            } catch {
+                print("Error decoding JSON: \(error)")
+                return []
+            }
         }
     }
 }

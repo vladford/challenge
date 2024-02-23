@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SalesPersonSearchView: View {
     
-    @StateObject var viewModel = ViewModel(scheduler: DispatchQueue.main)
+    @StateObject var viewModel = ViewModel(scheduler: DispatchQueue.main, networkService: NetworkService())
     
     private let rowHeight: CGFloat = 68
     private let serachBarHeight: CGFloat = 44
@@ -40,6 +40,8 @@ struct SalesPersonSearchView: View {
             .toolbarBackground(CColors.header, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
+        }.onAppear() {
+            viewModel.loadData()
         }
     }
 }
