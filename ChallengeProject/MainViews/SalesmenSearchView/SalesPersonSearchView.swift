@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SalesPersonSearchView: View {
     
-    @State var viewModel = ViewModel()
+    @StateObject var viewModel = ViewModel(scheduler: DispatchQueue.main)
     
     private let rowHeight: CGFloat = 68
     private let serachBarHeight: CGFloat = 44
@@ -24,7 +24,7 @@ struct SalesPersonSearchView: View {
                     .padding(.top, serachTopPadding)
                     .padding([.leading, .trailing], serachSidePadding)
                 List {
-                    ForEach(viewModel.filteredData(searchText: viewModel.searchText, data: viewModel.data), id: \.self) { person in
+                    ForEach(viewModel.filteredData, id: \.self) { person in
                         CCellView(name: person.name, addresses: person.areasString(), rowHeight: rowHeight)
                             .listSectionSeparator(.hidden, edges: .top)
                             .listRowSeparatorTint(CColors.gray3)

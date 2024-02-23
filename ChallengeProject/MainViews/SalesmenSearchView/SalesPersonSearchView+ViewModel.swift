@@ -5,12 +5,13 @@
 //  Created by Wladyslaw Jasinski on 22/02/2024.
 //
 
-import Foundation
+import Combine
 import SwiftUI
 
+
 extension SalesPersonSearchView {
-    @Observable
-    class ViewModel {
+    
+    class ViewModel: ObservableObject {
         var data: [SalesPerson] = [
             SalesPerson(name:"Artem Titarenko", areas: ["76133"]),
             SalesPerson(name:"Bernd Schmitt", areas: ["7619*"]),
@@ -18,13 +19,23 @@ extension SalesPersonSearchView {
             SalesPerson(name:"Alex Uber", areas: ["86*"])
         ]
         
-        var searchText = ""
+        @Published var searchText = ""
+        @Published private var debouncedSearchText = ""
+        private let bufferSecondsToWait: Double = 1
         
-        func filteredData(searchText: String, data: [SalesPerson]) -> [SalesPerson] {
-            guard !searchText.isEmpty else { return data }
+        var filteredData: [SalesPerson] {
+            guard !debouncedSearchText.isEmpty else { return data }
             return data.filter { person in
-                person.areas.contains(where: { $0.starts(with: searchText) })
+                person.areas.contains { area in
+                    area.lowercased().starts(with: debouncedSearchText.lowercased())
+                }
             }
+        }
+        
+        init<S: Scheduler>(scheduler: S) where S.SchedulerTimeType == DispatchQueue.SchedulerTimeType {
+            $searchText
+                .debounce(for: .seconds(bufferSecondsToWait), scheduler: scheduler)
+                .assign(to: &$debouncedSearchText)
         }
     }
 }
