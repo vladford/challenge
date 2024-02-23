@@ -28,6 +28,8 @@
 		E9291B772B887D7A00302202 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B762B887D7A00302202 /* NetworkServiceProtocol.swift */; };
 		E9291B792B887D9A00302202 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B782B887D9A00302202 /* NetworkService.swift */; };
 		E9291B7B2B887F0A00302202 /* CURLStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B7A2B887F0A00302202 /* CURLStrings.swift */; };
+		E9BBD01B2B8891DC00C3103D /* CCellModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBD01A2B8891DC00C3103D /* CCellModelTests.swift */; };
+		E9BBD01D2B8892F700C3103D /* CSearchBarModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBD01C2B8892F700C3103D /* CSearchBarModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		E9291B762B887D7A00302202 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		E9291B782B887D9A00302202 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E9291B7A2B887F0A00302202 /* CURLStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLStrings.swift; sourceTree = "<group>"; };
+		E9BBD01A2B8891DC00C3103D /* CCellModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCellModelTests.swift; sourceTree = "<group>"; };
+		E9BBD01C2B8892F700C3103D /* CSearchBarModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSearchBarModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +134,6 @@
 				E9291B282B881E7200302202 /* ChallengeProjectApp.swift */,
 				E9291B6B2B881ECA00302202 /* CStrings.swift */,
 				E9291B6D2B881ECF00302202 /* CColors.swift */,
-				E9291B7A2B887F0A00302202 /* CURLStrings.swift */,
 				E9291B2C2B881E7300302202 /* Assets.xcassets */,
 				E9291B2E2B881E7300302202 /* Preview Content */,
 			);
@@ -149,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				E9291B392B881E7300302202 /* NetworkTests.swift */,
+				E9BBD01A2B8891DC00C3103D /* CCellModelTests.swift */,
+				E9BBD01C2B8892F700C3103D /* CSearchBarModelTests.swift */,
 			);
 			path = ChallengeProjectTests;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 		E9291B752B887D5500302202 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E9291B7A2B887F0A00302202 /* CURLStrings.swift */,
 				E9291B762B887D7A00302202 /* NetworkServiceProtocol.swift */,
 				E9291B782B887D9A00302202 /* NetworkService.swift */,
 			);
@@ -387,6 +393,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9291B3A2B881E7300302202 /* NetworkTests.swift in Sources */,
+				E9BBD01D2B8892F700C3103D /* CSearchBarModelTests.swift in Sources */,
+				E9BBD01B2B8891DC00C3103D /* CCellModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
