@@ -30,6 +30,7 @@
 		E9291B7B2B887F0A00302202 /* CURLStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9291B7A2B887F0A00302202 /* CURLStrings.swift */; };
 		E9BBD01B2B8891DC00C3103D /* CCellModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBD01A2B8891DC00C3103D /* CCellModelTests.swift */; };
 		E9BBD01D2B8892F700C3103D /* CSearchBarModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBD01C2B8892F700C3103D /* CSearchBarModelTests.swift */; };
+		E9BBD01F2B8894EC00C3103D /* SalesPersonSearchModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBD01E2B8894EC00C3103D /* SalesPersonSearchModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		E9291B7A2B887F0A00302202 /* CURLStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLStrings.swift; sourceTree = "<group>"; };
 		E9BBD01A2B8891DC00C3103D /* CCellModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCellModelTests.swift; sourceTree = "<group>"; };
 		E9BBD01C2B8892F700C3103D /* CSearchBarModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSearchBarModelTests.swift; sourceTree = "<group>"; };
+		E9BBD01E2B8894EC00C3103D /* SalesPersonSearchModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesPersonSearchModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				E9291B392B881E7300302202 /* NetworkTests.swift */,
 				E9BBD01A2B8891DC00C3103D /* CCellModelTests.swift */,
 				E9BBD01C2B8892F700C3103D /* CSearchBarModelTests.swift */,
+				E9BBD01E2B8894EC00C3103D /* SalesPersonSearchModelTests.swift */,
 			);
 			path = ChallengeProjectTests;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				E9291B3A2B881E7300302202 /* NetworkTests.swift in Sources */,
 				E9BBD01D2B8892F700C3103D /* CSearchBarModelTests.swift in Sources */,
 				E9BBD01B2B8891DC00C3103D /* CCellModelTests.swift in Sources */,
+				E9BBD01F2B8894EC00C3103D /* SalesPersonSearchModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

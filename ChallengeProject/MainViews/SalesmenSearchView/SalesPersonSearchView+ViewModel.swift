@@ -16,7 +16,7 @@ extension SalesPersonSearchView {
         var data = [SalesPerson]()
         
         @Published var searchText = ""
-        @Published private var debouncedSearchText = ""
+        @Published var debouncedSearchText = ""
         private let bufferSecondsToWait: Double = 1
         
         var filteredData: [SalesPerson] {
