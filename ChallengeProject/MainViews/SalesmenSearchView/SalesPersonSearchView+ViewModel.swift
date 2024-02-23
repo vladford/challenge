@@ -13,7 +13,7 @@ extension SalesPersonSearchView {
     
     class ViewModel: ObservableObject {
         var data: [SalesPerson] = [
-            SalesPerson(name:"Artem Titarenko", areas: ["76133"]),
+            SalesPerson(name:"Artem Titarenko", areas: ["76133", "9900*", "86543"]),
             SalesPerson(name:"Bernd Schmitt", areas: ["7619*"]),
             SalesPerson(name:"Chris Krapp", areas: ["762*"]),
             SalesPerson(name:"Alex Uber", areas: ["86*"])
@@ -24,11 +24,24 @@ extension SalesPersonSearchView {
         private let bufferSecondsToWait: Double = 1
         
         var filteredData: [SalesPerson] {
-            guard !debouncedSearchText.isEmpty else { return data }
+            var searchText = debouncedSearchText
+            if debouncedSearchText.hasSuffix("*") {
+                searchText = String(searchText.dropLast(1))
+            }
+            
+            guard !searchText.isEmpty else { return data }
             return data.filter { person in
-                person.areas.contains { area in
-                    area.lowercased().starts(with: debouncedSearchText.lowercased())
+                
+                for area in person.allAreas {
+                    
+                    print("area: \(area)")
+                    
+                    if area.starts(with: searchText) {
+                        print("x area: \(area) starts \(searchText))")
+                        return true
+                    }
                 }
+                return false
             }
         }
         

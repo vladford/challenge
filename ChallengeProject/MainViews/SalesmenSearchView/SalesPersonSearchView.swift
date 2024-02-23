@@ -25,7 +25,7 @@ struct SalesPersonSearchView: View {
                     .padding([.leading, .trailing], serachSidePadding)
                 List {
                     ForEach(viewModel.filteredData, id: \.self) { person in
-                        CCellView(name: person.name, addresses: person.areasString(), rowHeight: rowHeight)
+                        CCellView(name: person.name, addresses: person.areasString, rowHeight: rowHeight)
                             .listSectionSeparator(.hidden, edges: .top)
                             .listRowSeparatorTint(CColors.gray3)
                     }
