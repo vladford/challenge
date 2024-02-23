@@ -39,8 +39,8 @@ struct SalesPerson: Identifiable, Hashable, Decodable {
                 let numberOfZeros = 5 - base.count // Calculate how many zeros to append
                 
                 // Calculate the start and end range based on the base
-                let startRange = Int(base + String(repeating: "0", count: numberOfZeros))!
-                let endRange = Int(base + String(repeating: "9", count: numberOfZeros))!
+                let startRange = Int(base + String(repeating: "0", count: numberOfZeros)) ?? 0
+                let endRange = Int(base + String(repeating: "9", count: numberOfZeros)) ?? 0
                 
                 // Generate all codes within the range
                 for code in startRange...endRange {

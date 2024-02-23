@@ -31,6 +31,7 @@
 		E9BBD01B2B8891DC00C3103D /* CCellModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBD01A2B8891DC00C3103D /* CCellModelTests.swift */; };
 		E9BBD01D2B8892F700C3103D /* CSearchBarModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBD01C2B8892F700C3103D /* CSearchBarModelTests.swift */; };
 		E9BBD01F2B8894EC00C3103D /* SalesPersonSearchModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBD01E2B8894EC00C3103D /* SalesPersonSearchModelTests.swift */; };
+		E9BBD0212B889DFB00C3103D /* SalesPersonModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBD0202B889DFB00C3103D /* SalesPersonModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		E9BBD01A2B8891DC00C3103D /* CCellModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCellModelTests.swift; sourceTree = "<group>"; };
 		E9BBD01C2B8892F700C3103D /* CSearchBarModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSearchBarModelTests.swift; sourceTree = "<group>"; };
 		E9BBD01E2B8894EC00C3103D /* SalesPersonSearchModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesPersonSearchModelTests.swift; sourceTree = "<group>"; };
+		E9BBD0202B889DFB00C3103D /* SalesPersonModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesPersonModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				E9BBD01A2B8891DC00C3103D /* CCellModelTests.swift */,
 				E9BBD01C2B8892F700C3103D /* CSearchBarModelTests.swift */,
 				E9BBD01E2B8894EC00C3103D /* SalesPersonSearchModelTests.swift */,
+				E9BBD0202B889DFB00C3103D /* SalesPersonModelTests.swift */,
 			);
 			path = ChallengeProjectTests;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9BBD0212B889DFB00C3103D /* SalesPersonModelTests.swift in Sources */,
 				E9291B3A2B881E7300302202 /* NetworkTests.swift in Sources */,
 				E9BBD01D2B8892F700C3103D /* CSearchBarModelTests.swift in Sources */,
 				E9BBD01B2B8891DC00C3103D /* CCellModelTests.swift in Sources */,
