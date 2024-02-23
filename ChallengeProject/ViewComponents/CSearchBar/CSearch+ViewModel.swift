@@ -20,5 +20,12 @@ extension CSearchBar {
                 self.isEditing = editing
             }
         }
+        
+        func limitText(_ upper: Int, text: String) -> String {
+            if text.count > upper {
+                return String(text.prefix(upper))
+            }
+            return text
+        }
     }
 }

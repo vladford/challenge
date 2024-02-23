@@ -19,7 +19,7 @@ struct SalesPersonSearchView: View {
     var body: some View {
         NavigationView {
             VStack {
-                CSearchBar(text: $viewModel.searchText, keyboardType: .phonePad)
+                CSearchBar(text: $viewModel.searchText, keyboardType: .phonePad, maxCharacters: 5)
                     .frame(height: serachBarHeight)
                     .padding(.top, serachTopPadding)
                     .padding([.leading, .trailing], serachSidePadding)

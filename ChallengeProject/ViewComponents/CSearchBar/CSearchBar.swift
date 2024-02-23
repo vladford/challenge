@@ -7,23 +7,29 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 struct CSearchBar: View {
     @Binding var text: String
     @FocusState var isTextFieldFocused: Bool
     @State var viewModel = ViewModel()
     var keyboardType: UIKeyboardType
+    var maxCharacters: Int
     
-     let height: CGFloat = 36
-     let horizontalPadding: CGFloat = 30
-     let cornerRadius: CGFloat = 10
-     let leftSideIconPadding: CGFloat = 8
-     let rightSideIconPadding: CGFloat = 10
-     let cancelButtonPading: CGFloat = 10
+    let height: CGFloat = 36
+    let horizontalPadding: CGFloat = 30
+    let cornerRadius: CGFloat = 10
+    let leftSideIconPadding: CGFloat = 8
+    let rightSideIconPadding: CGFloat = 10
+    let cancelButtonPading: CGFloat = 10
+    
     
     var body: some View {
         HStack {
             TextField(CStrings.search, text: $text)
+                .onReceive(Just(text)) { _ in
+                    text = viewModel.limitText(maxCharacters, text: text)
+                }
                 .keyboardType(keyboardType)
                 .focused($isTextFieldFocused)
                 .frame(height: height)
