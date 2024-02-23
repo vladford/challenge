@@ -9,14 +9,7 @@ import SwiftUI
 
 struct SalesPersonSearchView: View {
     
-    let data: [SalesPerson] = [
-        SalesPerson(name:"Artem Titarenko", areas: ["76133"]),
-        SalesPerson(name:"Bernd Schmitt", areas: ["7619*"]),
-        SalesPerson(name:"Chris Krapp", areas: ["762*"]),
-        SalesPerson(name:"Alex Uber", areas: ["86*"])
-    ]
-    
-    @State var searchText = ""
+    @State var viewModel = ViewModel()
     
     private let rowHeight: CGFloat = 68
     private let serachBarHeight: CGFloat = 44
@@ -26,13 +19,13 @@ struct SalesPersonSearchView: View {
     var body: some View {
         NavigationView {
             VStack {
-                CSearchBar(text: $searchText)
+                CSearchBar(text: $viewModel.searchText)
                     .frame(height: serachBarHeight)
                     .padding(.top, serachTopPadding)
                     .padding([.leading, .trailing], serachSidePadding)
                 List {
-                    ForEach(data) { person in
-                        CCellView(name: person.name, addresses: "some areas", rowHeight: rowHeight)
+                    ForEach(viewModel.filteredData(searchText: viewModel.searchText, data: viewModel.data), id: \.self) { person in
+                        CCellView(name: person.name, addresses: person.areasString(), rowHeight: rowHeight)
                             .listSectionSeparator(.hidden, edges: .top)
                             .listRowSeparatorTint(CColors.gray3)
                     }

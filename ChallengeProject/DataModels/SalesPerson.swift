@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct SalesPerson: Identifiable {
+struct SalesPerson: Identifiable, Hashable {
     let id = UUID()
     let name: String
     let areas: [String]
+    
+    func areasString() -> String {
+        return areas.joined(separator: ", ")
+    }
 }
